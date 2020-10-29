@@ -31,7 +31,7 @@ import (
 	"strings"
 
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/peer"
+	"github.com/Hyperledger-TWGC/grpc/peer"
 )
 
 const (

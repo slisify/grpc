@@ -30,11 +30,11 @@ import (
 	"time"
 
 	"golang.org/x/net/context"
-	"google.golang.org/grpc"
-	testpb "google.golang.org/grpc/benchmark/grpc_testing"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/status"
+	"github.com/Hyperledger-TWGC/grpc"
+	testpb "github.com/Hyperledger-TWGC/grpc/benchmark/grpc_testing"
+	"github.com/Hyperledger-TWGC/grpc/codes"
+	"github.com/Hyperledger-TWGC/grpc/grpclog"
+	"github.com/Hyperledger-TWGC/grpc/status"
 )
 
 var (

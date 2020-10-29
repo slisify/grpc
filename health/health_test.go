@@ -20,9 +20,9 @@ package health_test
 import (
 	"testing"
 
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/health"
-	pb "google.golang.org/grpc/health/grpc_health_v1"
+	"github.com/Hyperledger-TWGC/grpc"
+	"github.com/Hyperledger-TWGC/grpc/health"
+	pb "github.com/Hyperledger-TWGC/grpc/health/grpc_health_v1"
 )
 
 // Make sure the service implementation complies with the proto definition.

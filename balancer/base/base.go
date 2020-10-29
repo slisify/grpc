@@ -31,8 +31,8 @@
 package base
 
 import (
-	"google.golang.org/grpc/balancer"
-	"google.golang.org/grpc/resolver"
+	"github.com/Hyperledger-TWGC/grpc/balancer"
+	"github.com/Hyperledger-TWGC/grpc/resolver"
 )
 
 // PickerBuilder creates balancer.Picker.

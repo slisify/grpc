@@ -24,7 +24,7 @@ import (
 	"net"
 
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/credentials"
+	"github.com/Hyperledger-TWGC/grpc/credentials"
 )
 
 // Peer contains the information of the peer for an RPC, such as the address

@@ -25,8 +25,8 @@ import (
 	"strings"
 	"time"
 
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/grpclog"
+	"github.com/Hyperledger-TWGC/grpc/codes"
+	"github.com/Hyperledger-TWGC/grpc/grpclog"
 )
 
 const maxInt = int(^uint(0) >> 1)

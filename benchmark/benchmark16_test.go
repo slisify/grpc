@@ -24,8 +24,8 @@ import (
 	"os"
 	"testing"
 
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/benchmark/stats"
+	"github.com/Hyperledger-TWGC/grpc"
+	"github.com/Hyperledger-TWGC/grpc/benchmark/stats"
 )
 
 func BenchmarkClientStreamc1(b *testing.B) {

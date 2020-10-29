@@ -20,17 +20,17 @@
 // which encapsulate all the state needed by a client to authenticate with a
 // server and make various assertions, e.g., about the client's identity, role,
 // or whether it is authorized to make a particular call.
-package credentials // import "google.golang.org/grpc/credentials"
+package credentials // import "github.com/Hyperledger-TWGC/grpc/credentials"
 
 import (
-	"crypto/tls"
-	"crypto/x509"
 	"errors"
-	"fmt"
 	"io/ioutil"
 	"net"
 	"strings"
 
+	"github.com/Hyperledger-TWGC/ccs-gm/sm2"
+	"github.com/Hyperledger-TWGC/ccs-gm/tls"
+	"github.com/Hyperledger-TWGC/ccs-gm/x509"
 	"github.com/golang/protobuf/proto"
 	"golang.org/x/net/context"
 )
@@ -192,6 +192,21 @@ func (c *tlsCreds) OverrideServerName(serverNameOverride string) error {
 func NewTLS(c *tls.Config) TransportCredentials {
 	tc := &tlsCreds{cloneTLSConfig(c)}
 	tc.config.NextProtos = alpnProtoStr
+	if len(c.Certificates) > 0 {
+		_, ok := c.Certificates[0].PrivateKey.(*sm2.PrivateKey)
+		if ok {
+			tc.config.GMSupport = &tls.GMSupport{}
+			// just for test
+			// tc.config.ClientAuth = tls.RequestClientCert
+		}
+	} else {
+		certs := c.RootCAs.GetCerts()
+		if len(certs) > 0 {
+			if _, ok := certs[0].PublicKey.(*sm2.PublicKey); ok {
+				tc.config.GMSupport = &tls.GMSupport{}
+			}
+		}
+	}
 	return tc
 }
 
@@ -210,11 +225,18 @@ func NewClientTLSFromFile(certFile, serverNameOverride string) (TransportCredent
 	if err != nil {
 		return nil, err
 	}
-	cp := x509.NewCertPool()
-	if !cp.AppendCertsFromPEM(b) {
-		return nil, fmt.Errorf("credentials: failed to append certificates")
+	cert, err := x509.Pem2Cert(b)
+	if err != nil {
+		return nil, err
 	}
-	return NewTLS(&tls.Config{ServerName: serverNameOverride, RootCAs: cp}), nil
+	cp := x509.NewCertPool()
+	cp.AddCert(cert)
+	_, ok := cert.PublicKey.(*sm2.PublicKey)
+	if ok {
+		return NewTLS(&tls.Config{ServerName: serverNameOverride, RootCAs: cp, GMSupport: &tls.GMSupport{}}), nil
+	} else {
+		return NewTLS(&tls.Config{ServerName: serverNameOverride, RootCAs: cp}), nil
+	}
 }
 
 // NewServerTLSFromCert constructs TLS credentials from the input certificate for server.
@@ -229,7 +251,33 @@ func NewServerTLSFromFile(certFile, keyFile string) (TransportCredentials, error
 	if err != nil {
 		return nil, err
 	}
-	return NewTLS(&tls.Config{Certificates: []tls.Certificate{cert}}), nil
+	_, ok := cert.PrivateKey.(*sm2.PrivateKey)
+	if ok {
+		return NewTLS(&tls.Config{Certificates: []tls.Certificate{cert}, GMSupport: &tls.GMSupport{}}), nil
+	} else {
+		return NewTLS(&tls.Config{Certificates: []tls.Certificate{cert}}), nil
+	}
+}
+
+// NewServerTLSFromFile constructs TLS credentials from the input certificate file and key
+// file for server.
+func NewServerTLSFromFileDouble(signCertFile, signKeyFile, cipherCertFile, cipherKeyFile string) (TransportCredentials, error) {
+	signCert, err := tls.LoadX509KeyPair(signCertFile, signKeyFile)
+	if err != nil {
+		return nil, err
+	}
+	
+	cipherCert, err := tls.LoadX509KeyPair(cipherCertFile, cipherKeyFile)
+	if err != nil {
+		return nil, err
+	}
+
+	_, ok := signCert.PrivateKey.(*sm2.PrivateKey)
+	if ok {
+		return NewTLS(&tls.Config{Certificates: []tls.Certificate{signCert, cipherCert}, GMSupport: &tls.GMSupport{}}), nil
+	} else {
+		return NewTLS(&tls.Config{Certificates: []tls.Certificate{signCert, cipherCert}}), nil
+	}
 }
 
 // ChannelzSecurityInfo defines the interface that security protocols should implement

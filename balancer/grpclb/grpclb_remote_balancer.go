@@ -27,15 +27,15 @@ import (
 
 	timestamppb "github.com/golang/protobuf/ptypes/timestamp"
 	"golang.org/x/net/context"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/balancer"
-	lbpb "google.golang.org/grpc/balancer/grpclb/grpc_lb_v1"
-	"google.golang.org/grpc/connectivity"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/internal"
-	"google.golang.org/grpc/internal/channelz"
-	"google.golang.org/grpc/metadata"
-	"google.golang.org/grpc/resolver"
+	"github.com/Hyperledger-TWGC/grpc"
+	"github.com/Hyperledger-TWGC/grpc/balancer"
+	lbpb "github.com/Hyperledger-TWGC/grpc/balancer/grpclb/grpc_lb_v1"
+	"github.com/Hyperledger-TWGC/grpc/connectivity"
+	"github.com/Hyperledger-TWGC/grpc/grpclog"
+	"github.com/Hyperledger-TWGC/grpc/internal"
+	"github.com/Hyperledger-TWGC/grpc/internal/channelz"
+	"github.com/Hyperledger-TWGC/grpc/metadata"
+	"github.com/Hyperledger-TWGC/grpc/resolver"
 )
 
 // processServerList updates balaner's internal state, create/remove SubConns

@@ -20,10 +20,10 @@ package base
 
 import (
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/balancer"
-	"google.golang.org/grpc/connectivity"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/resolver"
+	"github.com/Hyperledger-TWGC/grpc/balancer"
+	"github.com/Hyperledger-TWGC/grpc/connectivity"
+	"github.com/Hyperledger-TWGC/grpc/grpclog"
+	"github.com/Hyperledger-TWGC/grpc/resolver"
 )
 
 type baseBuilder struct {

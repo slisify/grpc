@@ -31,12 +31,12 @@ import (
 	"time"
 
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/credentials"
-	core "google.golang.org/grpc/credentials/alts/internal"
-	"google.golang.org/grpc/credentials/alts/internal/handshaker"
-	"google.golang.org/grpc/credentials/alts/internal/handshaker/service"
-	altspb "google.golang.org/grpc/credentials/alts/internal/proto/grpc_gcp"
-	"google.golang.org/grpc/grpclog"
+	"github.com/Hyperledger-TWGC/grpc/credentials"
+	core "github.com/Hyperledger-TWGC/grpc/credentials/alts/internal"
+	"github.com/Hyperledger-TWGC/grpc/credentials/alts/internal/handshaker"
+	"github.com/Hyperledger-TWGC/grpc/credentials/alts/internal/handshaker/service"
+	altspb "github.com/Hyperledger-TWGC/grpc/credentials/alts/internal/proto/grpc_gcp"
+	"github.com/Hyperledger-TWGC/grpc/grpclog"
 )
 
 const (

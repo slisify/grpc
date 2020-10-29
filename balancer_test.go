@@ -27,16 +27,16 @@ import (
 	"time"
 
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/codes"
-	_ "google.golang.org/grpc/grpclog/glogger"
-	"google.golang.org/grpc/internal/leakcheck"
-	"google.golang.org/grpc/naming"
-	"google.golang.org/grpc/status"
+	"github.com/Hyperledger-TWGC/grpc/codes"
+	_ "github.com/Hyperledger-TWGC/grpc/grpclog/glogger"
+	"github.com/Hyperledger-TWGC/grpc/internal/leakcheck"
+	"github.com/Hyperledger-TWGC/grpc/naming"
+	"github.com/Hyperledger-TWGC/grpc/status"
 
 	// V1 balancer tests use passthrough resolver instead of dns.
 	// TODO(bar) remove this when removing v1 balaner entirely.
 
-	_ "google.golang.org/grpc/resolver/passthrough"
+	_ "github.com/Hyperledger-TWGC/grpc/resolver/passthrough"
 )
 
 func pickFirstBalancerV1(r naming.Resolver) Balancer {

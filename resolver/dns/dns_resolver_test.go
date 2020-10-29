@@ -27,8 +27,8 @@ import (
 	"testing"
 	"time"
 
-	"google.golang.org/grpc/internal/leakcheck"
-	"google.golang.org/grpc/resolver"
+	"github.com/Hyperledger-TWGC/grpc/internal/leakcheck"
+	"github.com/Hyperledger-TWGC/grpc/resolver"
 )
 
 func TestMain(m *testing.M) {

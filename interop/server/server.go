@@ -23,13 +23,13 @@ import (
 	"net"
 	"strconv"
 
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/credentials/alts"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/interop"
-	testpb "google.golang.org/grpc/interop/grpc_testing"
-	"google.golang.org/grpc/testdata"
+	"github.com/Hyperledger-TWGC/grpc"
+	"github.com/Hyperledger-TWGC/grpc/credentials"
+	"github.com/Hyperledger-TWGC/grpc/credentials/alts"
+	"github.com/Hyperledger-TWGC/grpc/grpclog"
+	"github.com/Hyperledger-TWGC/grpc/interop"
+	testpb "github.com/Hyperledger-TWGC/grpc/interop/grpc_testing"
+	"github.com/Hyperledger-TWGC/grpc/testdata"
 )
 
 var (

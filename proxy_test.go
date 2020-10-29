@@ -30,7 +30,7 @@ import (
 	"time"
 
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/internal/leakcheck"
+	"github.com/Hyperledger-TWGC/grpc/internal/leakcheck"
 )
 
 const (

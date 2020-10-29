@@ -36,12 +36,12 @@ import (
 	"github.com/golang/protobuf/proto"
 	"golang.org/x/net/context"
 	"golang.org/x/net/http2"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/metadata"
-	"google.golang.org/grpc/peer"
-	"google.golang.org/grpc/stats"
-	"google.golang.org/grpc/status"
+	"github.com/Hyperledger-TWGC/grpc/codes"
+	"github.com/Hyperledger-TWGC/grpc/credentials"
+	"github.com/Hyperledger-TWGC/grpc/metadata"
+	"github.com/Hyperledger-TWGC/grpc/peer"
+	"github.com/Hyperledger-TWGC/grpc/stats"
+	"github.com/Hyperledger-TWGC/grpc/status"
 )
 
 // NewServerHandlerTransport returns a ServerTransport handling gRPC
@@ -349,7 +349,7 @@ func (ht *serverHandlerTransport) HandleStreams(startStream func(*Stream), trace
 		Addr: ht.RemoteAddr(),
 	}
 	if req.TLS != nil {
-		pr.AuthInfo = credentials.TLSInfo{State: *req.TLS}
+		pr.AuthInfo = credentials.TLSInfo{State: *cloneConnectionState(req.TLS)}
 	}
 	ctx = metadata.NewIncomingContext(ctx, ht.headerMD)
 	s.ctx = peer.NewContext(ctx, pr)

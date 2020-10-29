@@ -26,10 +26,10 @@ import (
 
 	"golang.org/x/net/context"
 	epb "google.golang.org/genproto/googleapis/rpc/errdetails"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/codes"
-	pb "google.golang.org/grpc/examples/helloworld/helloworld"
-	"google.golang.org/grpc/status"
+	"github.com/Hyperledger-TWGC/grpc"
+	"github.com/Hyperledger-TWGC/grpc/codes"
+	pb "github.com/Hyperledger-TWGC/grpc/examples/helloworld/helloworld"
+	"github.com/Hyperledger-TWGC/grpc/status"
 )
 
 const (

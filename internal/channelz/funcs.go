@@ -28,7 +28,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"google.golang.org/grpc/grpclog"
+	"github.com/Hyperledger-TWGC/grpc/grpclog"
 )
 
 var (

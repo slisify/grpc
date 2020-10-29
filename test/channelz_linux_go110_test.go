@@ -28,9 +28,9 @@ import (
 	"testing"
 	"time"
 
-	"google.golang.org/grpc/internal/channelz"
-	"google.golang.org/grpc/internal/leakcheck"
-	testpb "google.golang.org/grpc/test/grpc_testing"
+	"github.com/Hyperledger-TWGC/grpc/internal/channelz"
+	"github.com/Hyperledger-TWGC/grpc/internal/leakcheck"
+	testpb "github.com/Hyperledger-TWGC/grpc/test/grpc_testing"
 )
 
 func TestCZSocketMetricsSocketOption(t *testing.T) {

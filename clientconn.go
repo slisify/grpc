@@ -31,20 +31,20 @@ import (
 
 	"golang.org/x/net/context"
 	"golang.org/x/net/trace"
-	"google.golang.org/grpc/balancer"
-	_ "google.golang.org/grpc/balancer/roundrobin" // To register roundrobin.
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/connectivity"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/internal/backoff"
-	"google.golang.org/grpc/internal/channelz"
-	"google.golang.org/grpc/internal/transport"
-	"google.golang.org/grpc/keepalive"
-	"google.golang.org/grpc/resolver"
-	_ "google.golang.org/grpc/resolver/dns"         // To register dns resolver.
-	_ "google.golang.org/grpc/resolver/passthrough" // To register passthrough resolver.
-	"google.golang.org/grpc/status"
+	"github.com/Hyperledger-TWGC/grpc/balancer"
+	_ "github.com/Hyperledger-TWGC/grpc/balancer/roundrobin" // To register roundrobin.
+	"github.com/Hyperledger-TWGC/grpc/codes"
+	"github.com/Hyperledger-TWGC/grpc/connectivity"
+	"github.com/Hyperledger-TWGC/grpc/credentials"
+	"github.com/Hyperledger-TWGC/grpc/grpclog"
+	"github.com/Hyperledger-TWGC/grpc/internal/backoff"
+	"github.com/Hyperledger-TWGC/grpc/internal/channelz"
+	"github.com/Hyperledger-TWGC/grpc/internal/transport"
+	"github.com/Hyperledger-TWGC/grpc/keepalive"
+	"github.com/Hyperledger-TWGC/grpc/resolver"
+	_ "github.com/Hyperledger-TWGC/grpc/resolver/dns"         // To register dns resolver.
+	_ "github.com/Hyperledger-TWGC/grpc/resolver/passthrough" // To register passthrough resolver.
+	"github.com/Hyperledger-TWGC/grpc/status"
 )
 
 const (

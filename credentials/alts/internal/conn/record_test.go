@@ -28,7 +28,7 @@ import (
 	"reflect"
 	"testing"
 
-	core "google.golang.org/grpc/credentials/alts/internal"
+	core "github.com/Hyperledger-TWGC/grpc/credentials/alts/internal"
 )
 
 var (

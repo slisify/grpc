@@ -24,7 +24,7 @@ import (
 	"context"
 
 	netctx "golang.org/x/net/context"
-	"google.golang.org/grpc/codes"
+	"github.com/Hyperledger-TWGC/grpc/codes"
 )
 
 // FromContextError converts a context error into a Status.  It returns a

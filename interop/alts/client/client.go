@@ -24,10 +24,10 @@ import (
 	"time"
 
 	"golang.org/x/net/context"
-	grpc "google.golang.org/grpc"
-	"google.golang.org/grpc/credentials/alts"
-	"google.golang.org/grpc/grpclog"
-	testpb "google.golang.org/grpc/interop/grpc_testing"
+	grpc "github.com/Hyperledger-TWGC/grpc"
+	"github.com/Hyperledger-TWGC/grpc/credentials/alts"
+	"github.com/Hyperledger-TWGC/grpc/grpclog"
+	testpb "github.com/Hyperledger-TWGC/grpc/interop/grpc_testing"
 )
 
 var (

@@ -24,15 +24,15 @@ import (
 	"time"
 
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/balancer"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/internal"
-	"google.golang.org/grpc/internal/backoff"
-	"google.golang.org/grpc/internal/envconfig"
-	"google.golang.org/grpc/internal/transport"
-	"google.golang.org/grpc/keepalive"
-	"google.golang.org/grpc/resolver"
-	"google.golang.org/grpc/stats"
+	"github.com/Hyperledger-TWGC/grpc/balancer"
+	"github.com/Hyperledger-TWGC/grpc/credentials"
+	"github.com/Hyperledger-TWGC/grpc/internal"
+	"github.com/Hyperledger-TWGC/grpc/internal/backoff"
+	"github.com/Hyperledger-TWGC/grpc/internal/envconfig"
+	"github.com/Hyperledger-TWGC/grpc/internal/transport"
+	"github.com/Hyperledger-TWGC/grpc/keepalive"
+	"github.com/Hyperledger-TWGC/grpc/resolver"
+	"github.com/Hyperledger-TWGC/grpc/stats"
 )
 
 // dialOptions configure a Dial call. dialOptions are set by the DialOption

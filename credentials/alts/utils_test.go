@@ -24,8 +24,8 @@ import (
 	"testing"
 
 	"golang.org/x/net/context"
-	altspb "google.golang.org/grpc/credentials/alts/internal/proto/grpc_gcp"
-	"google.golang.org/grpc/peer"
+	altspb "github.com/Hyperledger-TWGC/grpc/credentials/alts/internal/proto/grpc_gcp"
+	"github.com/Hyperledger-TWGC/grpc/peer"
 )
 
 func TestIsRunningOnGCP(t *testing.T) {

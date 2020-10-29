@@ -29,12 +29,12 @@ import (
 	durpb "github.com/golang/protobuf/ptypes/duration"
 	wrpb "github.com/golang/protobuf/ptypes/wrappers"
 	"golang.org/x/net/context"
-	"google.golang.org/grpc"
-	channelzgrpc "google.golang.org/grpc/channelz/grpc_channelz_v1"
-	channelzpb "google.golang.org/grpc/channelz/grpc_channelz_v1"
-	"google.golang.org/grpc/connectivity"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/internal/channelz"
+	"github.com/Hyperledger-TWGC/grpc"
+	channelzgrpc "github.com/Hyperledger-TWGC/grpc/channelz/grpc_channelz_v1"
+	channelzpb "github.com/Hyperledger-TWGC/grpc/channelz/grpc_channelz_v1"
+	"github.com/Hyperledger-TWGC/grpc/connectivity"
+	"github.com/Hyperledger-TWGC/grpc/credentials"
+	"github.com/Hyperledger-TWGC/grpc/internal/channelz"
 )
 
 func init() {

@@ -25,11 +25,11 @@ import (
 	"time"
 
 	"golang.org/x/net/context"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/internal/leakcheck"
-	"google.golang.org/grpc/resolver"
-	"google.golang.org/grpc/resolver/manual"
-	"google.golang.org/grpc/status"
+	"github.com/Hyperledger-TWGC/grpc/codes"
+	"github.com/Hyperledger-TWGC/grpc/internal/leakcheck"
+	"github.com/Hyperledger-TWGC/grpc/resolver"
+	"github.com/Hyperledger-TWGC/grpc/resolver/manual"
+	"github.com/Hyperledger-TWGC/grpc/status"
 )
 
 func errorDesc(err error) string {

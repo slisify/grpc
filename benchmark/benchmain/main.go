@@ -60,14 +60,14 @@ import (
 	"time"
 
 	"golang.org/x/net/context"
-	"google.golang.org/grpc"
-	bm "google.golang.org/grpc/benchmark"
-	testpb "google.golang.org/grpc/benchmark/grpc_testing"
-	"google.golang.org/grpc/benchmark/latency"
-	"google.golang.org/grpc/benchmark/stats"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/internal/channelz"
-	"google.golang.org/grpc/test/bufconn"
+	"github.com/Hyperledger-TWGC/grpc"
+	bm "github.com/Hyperledger-TWGC/grpc/benchmark"
+	testpb "github.com/Hyperledger-TWGC/grpc/benchmark/grpc_testing"
+	"github.com/Hyperledger-TWGC/grpc/benchmark/latency"
+	"github.com/Hyperledger-TWGC/grpc/benchmark/stats"
+	"github.com/Hyperledger-TWGC/grpc/grpclog"
+	"github.com/Hyperledger-TWGC/grpc/internal/channelz"
+	"github.com/Hyperledger-TWGC/grpc/test/bufconn"
 )
 
 const (

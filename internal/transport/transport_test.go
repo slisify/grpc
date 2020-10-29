@@ -39,10 +39,10 @@ import (
 	"golang.org/x/net/context"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/hpack"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/internal/leakcheck"
-	"google.golang.org/grpc/keepalive"
-	"google.golang.org/grpc/status"
+	"github.com/Hyperledger-TWGC/grpc/codes"
+	"github.com/Hyperledger-TWGC/grpc/internal/leakcheck"
+	"github.com/Hyperledger-TWGC/grpc/keepalive"
+	"github.com/Hyperledger-TWGC/grpc/status"
 )
 
 type server struct {

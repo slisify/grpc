@@ -24,7 +24,7 @@ import (
 	"context"
 	"testing"
 
-	"google.golang.org/grpc/codes"
+	"github.com/Hyperledger-TWGC/grpc/codes"
 )
 
 func TestFromStdContextError(t *testing.T) {
