@@ -34,14 +34,14 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
+	"github.com/slisify/grpc/codes"
+	"github.com/slisify/grpc/credentials"
+	"github.com/slisify/grpc/metadata"
+	"github.com/slisify/grpc/peer"
+	"github.com/slisify/grpc/stats"
+	"github.com/slisify/grpc/status"
 	"golang.org/x/net/context"
 	"golang.org/x/net/http2"
-	"github.com/Hyperledger-TWGC/grpc/codes"
-	"github.com/Hyperledger-TWGC/grpc/credentials"
-	"github.com/Hyperledger-TWGC/grpc/metadata"
-	"github.com/Hyperledger-TWGC/grpc/peer"
-	"github.com/Hyperledger-TWGC/grpc/stats"
-	"github.com/Hyperledger-TWGC/grpc/status"
 )
 
 // NewServerHandlerTransport returns a ServerTransport handling gRPC

@@ -32,11 +32,11 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	dpb "github.com/golang/protobuf/protoc-gen-go/descriptor"
+	"github.com/slisify/grpc"
+	rpb "github.com/slisify/grpc/reflection/grpc_reflection_v1alpha"
+	pb "github.com/slisify/grpc/reflection/grpc_testing"
+	pbv3 "github.com/slisify/grpc/reflection/grpc_testingv3"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc"
-	rpb "github.com/Hyperledger-TWGC/grpc/reflection/grpc_reflection_v1alpha"
-	pb "github.com/Hyperledger-TWGC/grpc/reflection/grpc_testing"
-	pbv3 "github.com/Hyperledger-TWGC/grpc/reflection/grpc_testingv3"
 )
 
 var (

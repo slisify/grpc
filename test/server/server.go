@@ -3,16 +3,16 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/Hyperledger-TWGC/grpc"
-	"github.com/Hyperledger-TWGC/grpc/credentials"
-	"github.com/Hyperledger-TWGC/grpc/test/hello"
+	"github.com/slisify/grpc"
+	"github.com/slisify/grpc/credentials"
+	"github.com/slisify/grpc/test/hello"
 	"net"
 )
 
 type CommServer struct {
 }
 
-func (comm *CommServer)Speak(ctx context.Context, content *hello.Content) (*hello.Content, error) {
+func (comm *CommServer) Speak(ctx context.Context, content *hello.Content) (*hello.Content, error) {
 	fmt.Println("receive message :", content.Detail)
 	return &hello.Content{Detail: "i am server"}, nil
 }

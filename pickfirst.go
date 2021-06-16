@@ -19,11 +19,11 @@
 package grpc
 
 import (
+	"github.com/slisify/grpc/balancer"
+	"github.com/slisify/grpc/connectivity"
+	"github.com/slisify/grpc/grpclog"
+	"github.com/slisify/grpc/resolver"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc/balancer"
-	"github.com/Hyperledger-TWGC/grpc/connectivity"
-	"github.com/Hyperledger-TWGC/grpc/grpclog"
-	"github.com/Hyperledger-TWGC/grpc/resolver"
 )
 
 // PickFirstBalancerName is the name of the pick_first balancer.

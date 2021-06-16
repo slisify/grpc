@@ -1,10 +1,10 @@
-module github.com/Hyperledger-TWGC/grpc
+module github.com/slisify/grpc
 
 go 1.14
 
 require (
 	cloud.google.com/go v0.26.0 // indirect
-	github.com/Hyperledger-TWGC/ccs-gm v0.1.1
+	github.com/slisify/ccs-gm v0.1.1
 	github.com/client9/misspell v0.3.4
 	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
 	github.com/golang/lint v0.0.0-20180702182130-06c8688daad7

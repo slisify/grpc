@@ -20,16 +20,16 @@
 package main
 
 import (
-	"crypto/tls"
+	“github.com/slisify/ccs-gm/tls"
 	"log"
 	"time"
 
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2"
-	"github.com/Hyperledger-TWGC/grpc"
-	"github.com/Hyperledger-TWGC/grpc/credentials"
-	"github.com/Hyperledger-TWGC/grpc/credentials/oauth"
-	pb "github.com/Hyperledger-TWGC/grpc/examples/helloworld/helloworld"
+	"github.com/slisify/grpc"
+	"github.com/slisify/grpc/credentials"
+	"github.com/slisify/grpc/credentials/oauth"
+	pb "github.com/slisify/grpc/examples/helloworld/helloworld"
 )
 
 func main() {
@@ -38,7 +38,7 @@ func main() {
 		// In addition to the following grpc.DialOption, callers may also use
 		// the grpc.CallOption grpc.PerRPCCredentials with the RPC invocation
 		// itself.
-		// See: https://godoc.org/github.com/Hyperledger-TWGC/grpc#PerRPCCredentials
+		// See: https://godoc.org/github.com/slisify/grpc#PerRPCCredentials
 		grpc.WithPerRPCCredentials(perRPC),
 		// oauth.NewOauthAccess requires the configuration of transport
 		// credentials.

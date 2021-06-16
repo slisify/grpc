@@ -8,8 +8,8 @@ import fmt "fmt"
 import math "math"
 
 import (
+	grpc "github.com/slisify/grpc"
 	context "golang.org/x/net/context"
-	grpc "github.com/Hyperledger-TWGC/grpc"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -103,7 +103,8 @@ func (*ServerReflectionRequest_FileContainingSymbol) isServerReflectionRequest_M
 
 func (*ServerReflectionRequest_FileContainingExtension) isServerReflectionRequest_MessageRequest() {}
 
-func (*ServerReflectionRequest_AllExtensionNumbersOfType) isServerReflectionRequest_MessageRequest() {}
+func (*ServerReflectionRequest_AllExtensionNumbersOfType) isServerReflectionRequest_MessageRequest() {
+}
 
 func (*ServerReflectionRequest_ListServices) isServerReflectionRequest_MessageRequest() {}
 
@@ -389,7 +390,8 @@ type ServerReflectionResponse_ErrorResponse struct {
 	ErrorResponse *ErrorResponse `protobuf:"bytes,7,opt,name=error_response,json=errorResponse,proto3,oneof"`
 }
 
-func (*ServerReflectionResponse_FileDescriptorResponse) isServerReflectionResponse_MessageResponse() {}
+func (*ServerReflectionResponse_FileDescriptorResponse) isServerReflectionResponse_MessageResponse() {
+}
 
 func (*ServerReflectionResponse_AllExtensionNumbersResponse) isServerReflectionResponse_MessageResponse() {
 }
@@ -791,7 +793,7 @@ const _ = grpc.SupportPackageIsVersion4
 
 // ServerReflectionClient is the client API for ServerReflection service.
 //
-// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/github.com/Hyperledger-TWGC/grpc#ClientConn.NewStream.
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/github.com/slisify/grpc#ClientConn.NewStream.
 type ServerReflectionClient interface {
 	// The reflection service is structured as a bidirectional stream, ensuring
 	// all related requests go to a single server.

@@ -26,18 +26,18 @@ import (
 	"sync"
 	"time"
 
+	"github.com/slisify/grpc/balancer"
+	"github.com/slisify/grpc/codes"
+	"github.com/slisify/grpc/encoding"
+	"github.com/slisify/grpc/grpclog"
+	"github.com/slisify/grpc/internal/channelz"
+	"github.com/slisify/grpc/internal/grpcrand"
+	"github.com/slisify/grpc/internal/transport"
+	"github.com/slisify/grpc/metadata"
+	"github.com/slisify/grpc/stats"
+	"github.com/slisify/grpc/status"
 	"golang.org/x/net/context"
 	"golang.org/x/net/trace"
-	"github.com/Hyperledger-TWGC/grpc/balancer"
-	"github.com/Hyperledger-TWGC/grpc/codes"
-	"github.com/Hyperledger-TWGC/grpc/encoding"
-	"github.com/Hyperledger-TWGC/grpc/grpclog"
-	"github.com/Hyperledger-TWGC/grpc/internal/channelz"
-	"github.com/Hyperledger-TWGC/grpc/internal/grpcrand"
-	"github.com/Hyperledger-TWGC/grpc/internal/transport"
-	"github.com/Hyperledger-TWGC/grpc/metadata"
-	"github.com/Hyperledger-TWGC/grpc/stats"
-	"github.com/Hyperledger-TWGC/grpc/status"
 )
 
 // StreamHandler defines the handler called by gRPC server to complete the

@@ -29,9 +29,9 @@ import (
 	"runtime/pprof"
 	"time"
 
-	"github.com/Hyperledger-TWGC/grpc/benchmark"
-	"github.com/Hyperledger-TWGC/grpc/grpclog"
-	"github.com/Hyperledger-TWGC/grpc/internal/syscall"
+	"github.com/slisify/grpc/benchmark"
+	"github.com/slisify/grpc/grpclog"
+	"github.com/slisify/grpc/internal/syscall"
 )
 
 var (

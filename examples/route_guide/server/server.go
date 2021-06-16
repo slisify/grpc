@@ -36,15 +36,15 @@ import (
 	"sync"
 	"time"
 
+	"github.com/slisify/grpc"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc"
 
-	"github.com/Hyperledger-TWGC/grpc/credentials"
-	"github.com/Hyperledger-TWGC/grpc/testdata"
+	"github.com/slisify/grpc/credentials"
+	"github.com/slisify/grpc/testdata"
 
 	"github.com/golang/protobuf/proto"
 
-	pb "github.com/Hyperledger-TWGC/grpc/examples/route_guide/routeguide"
+	pb "github.com/slisify/grpc/examples/route_guide/routeguide"
 )
 
 var (

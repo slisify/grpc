@@ -31,12 +31,12 @@ import (
 	"testing"
 	"time"
 
+	"github.com/slisify/grpc"
+	testpb "github.com/slisify/grpc/benchmark/grpc_testing"
+	"github.com/slisify/grpc/benchmark/latency"
+	"github.com/slisify/grpc/benchmark/stats"
+	"github.com/slisify/grpc/grpclog"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc"
-	testpb "github.com/Hyperledger-TWGC/grpc/benchmark/grpc_testing"
-	"github.com/Hyperledger-TWGC/grpc/benchmark/latency"
-	"github.com/Hyperledger-TWGC/grpc/benchmark/stats"
-	"github.com/Hyperledger-TWGC/grpc/grpclog"
 )
 
 // AddOne add 1 to the features slice

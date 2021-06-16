@@ -8,7 +8,7 @@ import fmt "fmt"
 import math "math"
 
 import (
-	grpc "github.com/Hyperledger-TWGC/grpc"
+	grpc "github.com/slisify/grpc"
 	context "golang.org/x/net/context"
 )
 

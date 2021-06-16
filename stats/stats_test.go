@@ -30,12 +30,12 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
+	"github.com/slisify/grpc"
+	"github.com/slisify/grpc/metadata"
+	"github.com/slisify/grpc/stats"
+	testpb "github.com/slisify/grpc/stats/grpc_testing"
+	"github.com/slisify/grpc/status"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc"
-	"github.com/Hyperledger-TWGC/grpc/metadata"
-	"github.com/Hyperledger-TWGC/grpc/stats"
-	testpb "github.com/Hyperledger-TWGC/grpc/stats/grpc_testing"
-	"github.com/Hyperledger-TWGC/grpc/status"
 )
 
 func init() {

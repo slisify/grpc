@@ -1,10 +1,10 @@
 package transport
 
 import (
-	origin "crypto/tls"
+	origin “github.com/slisify/ccs-gm/tls"
 	origX509 "crypto/x509"
-	"github.com/Hyperledger-TWGC/ccs-gm/tls"
-	"github.com/Hyperledger-TWGC/ccs-gm/x509"
+	"github.com/slisify/ccs-gm/tls"
+	"github.com/slisify/ccs-gm/x509"
 )
 
 

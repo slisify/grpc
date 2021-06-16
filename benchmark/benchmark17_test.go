@@ -27,8 +27,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Hyperledger-TWGC/grpc"
-	"github.com/Hyperledger-TWGC/grpc/benchmark/stats"
+	"github.com/slisify/grpc"
+	"github.com/slisify/grpc/benchmark/stats"
 )
 
 func BenchmarkClient(b *testing.B) {

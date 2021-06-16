@@ -25,9 +25,9 @@ import (
 
 	"github.com/golang/mock/gomock"
 	"github.com/golang/protobuf/proto"
+	helloworld "github.com/slisify/grpc/examples/helloworld/helloworld"
+	hwmock "github.com/slisify/grpc/examples/helloworld/mock_helloworld"
 	"golang.org/x/net/context"
-	helloworld "github.com/Hyperledger-TWGC/grpc/examples/helloworld/helloworld"
-	hwmock "github.com/Hyperledger-TWGC/grpc/examples/helloworld/mock_helloworld"
 )
 
 // rpcMsg implements the gomock.Matcher interface

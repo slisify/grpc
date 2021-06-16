@@ -32,10 +32,10 @@ import (
 
 	"github.com/golang/protobuf/ptypes"
 	durpb "github.com/golang/protobuf/ptypes/duration"
+	channelzpb "github.com/slisify/grpc/channelz/grpc_channelz_v1"
+	"github.com/slisify/grpc/internal/channelz"
 	"golang.org/x/net/context"
 	"golang.org/x/sys/unix"
-	channelzpb "github.com/Hyperledger-TWGC/grpc/channelz/grpc_channelz_v1"
-	"github.com/Hyperledger-TWGC/grpc/internal/channelz"
 )
 
 func init() {

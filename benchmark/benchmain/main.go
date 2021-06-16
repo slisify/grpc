@@ -59,15 +59,15 @@ import (
 	"testing"
 	"time"
 
+	"github.com/slisify/grpc"
+	bm "github.com/slisify/grpc/benchmark"
+	testpb "github.com/slisify/grpc/benchmark/grpc_testing"
+	"github.com/slisify/grpc/benchmark/latency"
+	"github.com/slisify/grpc/benchmark/stats"
+	"github.com/slisify/grpc/grpclog"
+	"github.com/slisify/grpc/internal/channelz"
+	"github.com/slisify/grpc/test/bufconn"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc"
-	bm "github.com/Hyperledger-TWGC/grpc/benchmark"
-	testpb "github.com/Hyperledger-TWGC/grpc/benchmark/grpc_testing"
-	"github.com/Hyperledger-TWGC/grpc/benchmark/latency"
-	"github.com/Hyperledger-TWGC/grpc/benchmark/stats"
-	"github.com/Hyperledger-TWGC/grpc/grpclog"
-	"github.com/Hyperledger-TWGC/grpc/internal/channelz"
-	"github.com/Hyperledger-TWGC/grpc/test/bufconn"
 )
 
 const (

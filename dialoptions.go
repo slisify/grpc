@@ -23,16 +23,16 @@ import (
 	"net"
 	"time"
 
+	"github.com/slisify/grpc/balancer"
+	"github.com/slisify/grpc/credentials"
+	"github.com/slisify/grpc/internal"
+	"github.com/slisify/grpc/internal/backoff"
+	"github.com/slisify/grpc/internal/envconfig"
+	"github.com/slisify/grpc/internal/transport"
+	"github.com/slisify/grpc/keepalive"
+	"github.com/slisify/grpc/resolver"
+	"github.com/slisify/grpc/stats"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc/balancer"
-	"github.com/Hyperledger-TWGC/grpc/credentials"
-	"github.com/Hyperledger-TWGC/grpc/internal"
-	"github.com/Hyperledger-TWGC/grpc/internal/backoff"
-	"github.com/Hyperledger-TWGC/grpc/internal/envconfig"
-	"github.com/Hyperledger-TWGC/grpc/internal/transport"
-	"github.com/Hyperledger-TWGC/grpc/keepalive"
-	"github.com/Hyperledger-TWGC/grpc/resolver"
-	"github.com/Hyperledger-TWGC/grpc/stats"
 )
 
 // dialOptions configure a Dial call. dialOptions are set by the DialOption

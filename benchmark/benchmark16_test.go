@@ -24,8 +24,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/Hyperledger-TWGC/grpc"
-	"github.com/Hyperledger-TWGC/grpc/benchmark/stats"
+	"github.com/slisify/grpc"
+	"github.com/slisify/grpc/benchmark/stats"
 )
 
 func BenchmarkClientStreamc1(b *testing.B) {

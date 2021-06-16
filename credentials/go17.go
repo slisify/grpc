@@ -21,7 +21,7 @@
 package credentials
 
 import (
-	"crypto/tls"
+	“github.com/slisify/ccs-gm/tls"
 )
 
 // cloneTLSConfig returns a shallow clone of the exported

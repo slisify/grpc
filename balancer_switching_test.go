@@ -24,14 +24,14 @@ import (
 	"testing"
 	"time"
 
+	"github.com/slisify/grpc/balancer"
+	"github.com/slisify/grpc/balancer/roundrobin"
+	"github.com/slisify/grpc/connectivity"
+	_ "github.com/slisify/grpc/grpclog/glogger"
+	"github.com/slisify/grpc/internal/leakcheck"
+	"github.com/slisify/grpc/resolver"
+	"github.com/slisify/grpc/resolver/manual"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc/balancer"
-	"github.com/Hyperledger-TWGC/grpc/balancer/roundrobin"
-	"github.com/Hyperledger-TWGC/grpc/connectivity"
-	_ "github.com/Hyperledger-TWGC/grpc/grpclog/glogger"
-	"github.com/Hyperledger-TWGC/grpc/internal/leakcheck"
-	"github.com/Hyperledger-TWGC/grpc/resolver"
-	"github.com/Hyperledger-TWGC/grpc/resolver/manual"
 )
 
 var _ balancer.Builder = &magicalLB{}

@@ -27,13 +27,13 @@ import (
 	"sync"
 	"time"
 
+	"github.com/slisify/grpc"
+	"github.com/slisify/grpc/benchmark"
+	testpb "github.com/slisify/grpc/benchmark/grpc_testing"
+	"github.com/slisify/grpc/benchmark/stats"
+	"github.com/slisify/grpc/grpclog"
+	"github.com/slisify/grpc/internal/syscall"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc"
-	"github.com/Hyperledger-TWGC/grpc/benchmark"
-	testpb "github.com/Hyperledger-TWGC/grpc/benchmark/grpc_testing"
-	"github.com/Hyperledger-TWGC/grpc/benchmark/stats"
-	"github.com/Hyperledger-TWGC/grpc/grpclog"
-	"github.com/Hyperledger-TWGC/grpc/internal/syscall"
 )
 
 var (

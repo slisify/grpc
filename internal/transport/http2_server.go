@@ -35,17 +35,17 @@ import (
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/hpack"
 
-	"github.com/Hyperledger-TWGC/grpc/codes"
-	"github.com/Hyperledger-TWGC/grpc/credentials"
-	"github.com/Hyperledger-TWGC/grpc/grpclog"
-	"github.com/Hyperledger-TWGC/grpc/internal/channelz"
-	"github.com/Hyperledger-TWGC/grpc/internal/grpcrand"
-	"github.com/Hyperledger-TWGC/grpc/keepalive"
-	"github.com/Hyperledger-TWGC/grpc/metadata"
-	"github.com/Hyperledger-TWGC/grpc/peer"
-	"github.com/Hyperledger-TWGC/grpc/stats"
-	"github.com/Hyperledger-TWGC/grpc/status"
-	"github.com/Hyperledger-TWGC/grpc/tap"
+	"github.com/slisify/grpc/codes"
+	"github.com/slisify/grpc/credentials"
+	"github.com/slisify/grpc/grpclog"
+	"github.com/slisify/grpc/internal/channelz"
+	"github.com/slisify/grpc/internal/grpcrand"
+	"github.com/slisify/grpc/keepalive"
+	"github.com/slisify/grpc/metadata"
+	"github.com/slisify/grpc/peer"
+	"github.com/slisify/grpc/stats"
+	"github.com/slisify/grpc/status"
+	"github.com/slisify/grpc/tap"
 )
 
 var (

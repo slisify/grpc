@@ -19,12 +19,12 @@
 package credentials
 
 import (
-	"crypto/tls"
+	“github.com/slisify/ccs-gm/tls"
 	"net"
 	"testing"
 
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc/testdata"
+	"github.com/slisify/grpc/testdata"
 )
 
 func TestTLSOverrideServerName(t *testing.T) {

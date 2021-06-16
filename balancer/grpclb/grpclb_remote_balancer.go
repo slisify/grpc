@@ -26,16 +26,16 @@ import (
 	"time"
 
 	timestamppb "github.com/golang/protobuf/ptypes/timestamp"
+	"github.com/slisify/grpc"
+	"github.com/slisify/grpc/balancer"
+	lbpb "github.com/slisify/grpc/balancer/grpclb/grpc_lb_v1"
+	"github.com/slisify/grpc/connectivity"
+	"github.com/slisify/grpc/grpclog"
+	"github.com/slisify/grpc/internal"
+	"github.com/slisify/grpc/internal/channelz"
+	"github.com/slisify/grpc/metadata"
+	"github.com/slisify/grpc/resolver"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc"
-	"github.com/Hyperledger-TWGC/grpc/balancer"
-	lbpb "github.com/Hyperledger-TWGC/grpc/balancer/grpclb/grpc_lb_v1"
-	"github.com/Hyperledger-TWGC/grpc/connectivity"
-	"github.com/Hyperledger-TWGC/grpc/grpclog"
-	"github.com/Hyperledger-TWGC/grpc/internal"
-	"github.com/Hyperledger-TWGC/grpc/internal/channelz"
-	"github.com/Hyperledger-TWGC/grpc/metadata"
-	"github.com/Hyperledger-TWGC/grpc/resolver"
 )
 
 // processServerList updates balaner's internal state, create/remove SubConns

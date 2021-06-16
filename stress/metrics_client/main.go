@@ -23,10 +23,10 @@ import (
 	"fmt"
 	"io"
 
+	"github.com/slisify/grpc"
+	"github.com/slisify/grpc/grpclog"
+	metricspb "github.com/slisify/grpc/stress/grpc_testing"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc"
-	"github.com/Hyperledger-TWGC/grpc/grpclog"
-	metricspb "github.com/Hyperledger-TWGC/grpc/stress/grpc_testing"
 )
 
 var (

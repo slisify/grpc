@@ -25,10 +25,10 @@ import (
 	"net"
 	"strings"
 
+	"github.com/slisify/grpc/connectivity"
+	"github.com/slisify/grpc/credentials"
+	"github.com/slisify/grpc/resolver"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc/connectivity"
-	"github.com/Hyperledger-TWGC/grpc/credentials"
-	"github.com/Hyperledger-TWGC/grpc/resolver"
 )
 
 var (

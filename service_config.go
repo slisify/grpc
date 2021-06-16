@@ -25,8 +25,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Hyperledger-TWGC/grpc/codes"
-	"github.com/Hyperledger-TWGC/grpc/grpclog"
+	"github.com/slisify/grpc/codes"
+	"github.com/slisify/grpc/grpclog"
 )
 
 const maxInt = int(^uint(0) >> 1)

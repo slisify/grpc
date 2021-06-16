@@ -21,19 +21,19 @@
 package main
 
 import (
-	"crypto/tls"
+	“github.com/slisify/ccs-gm/tls"
 	"log"
 	"net"
 	"strings"
 
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc"
-	"github.com/Hyperledger-TWGC/grpc/codes"
-	"github.com/Hyperledger-TWGC/grpc/credentials"
-	pb "github.com/Hyperledger-TWGC/grpc/examples/helloworld/helloworld"
-	"github.com/Hyperledger-TWGC/grpc/metadata"
-	"github.com/Hyperledger-TWGC/grpc/status"
-	"github.com/Hyperledger-TWGC/grpc/testdata"
+	"github.com/slisify/grpc"
+	"github.com/slisify/grpc/codes"
+	"github.com/slisify/grpc/credentials"
+	pb "github.com/slisify/grpc/examples/helloworld/helloworld"
+	"github.com/slisify/grpc/metadata"
+	"github.com/slisify/grpc/status"
+	"github.com/slisify/grpc/testdata"
 )
 
 var (
@@ -50,7 +50,7 @@ func main() {
 	opts := []grpc.ServerOption{
 		// The following grpc.ServerOption adds an interceptor for all unary
 		// RPCs. To configure an interceptor for streaming RPCs, see:
-		// https://godoc.org/github.com/Hyperledger-TWGC/grpc#StreamInterceptor
+		// https://godoc.org/github.com/slisify/grpc#StreamInterceptor
 		grpc.UnaryInterceptor(ensureValidToken),
 		// Enable TLS for all incoming connections.
 		grpc.Creds(credentials.NewServerTLSFromCert(&cert)),
@@ -99,7 +99,7 @@ func ensureValidToken(ctx context.Context, req interface{}, info *grpc.UnaryServ
 		return nil, errMissingMetadata
 	}
 	// The keys within metadata.MD are normalized to lowercase.
-	// See: https://godoc.org/github.com/Hyperledger-TWGC/grpc/metadata#New
+	// See: https://godoc.org/github.com/slisify/grpc/metadata#New
 	if !valid(md["authorization"]) {
 		return nil, errInvalidToken
 	}

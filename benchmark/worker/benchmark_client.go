@@ -25,17 +25,17 @@ import (
 	"sync"
 	"time"
 
+	"github.com/slisify/grpc"
+	"github.com/slisify/grpc/benchmark"
+	testpb "github.com/slisify/grpc/benchmark/grpc_testing"
+	"github.com/slisify/grpc/benchmark/stats"
+	"github.com/slisify/grpc/codes"
+	"github.com/slisify/grpc/credentials"
+	"github.com/slisify/grpc/grpclog"
+	"github.com/slisify/grpc/internal/syscall"
+	"github.com/slisify/grpc/status"
+	"github.com/slisify/grpc/testdata"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc"
-	"github.com/Hyperledger-TWGC/grpc/benchmark"
-	testpb "github.com/Hyperledger-TWGC/grpc/benchmark/grpc_testing"
-	"github.com/Hyperledger-TWGC/grpc/benchmark/stats"
-	"github.com/Hyperledger-TWGC/grpc/codes"
-	"github.com/Hyperledger-TWGC/grpc/credentials"
-	"github.com/Hyperledger-TWGC/grpc/grpclog"
-	"github.com/Hyperledger-TWGC/grpc/internal/syscall"
-	"github.com/Hyperledger-TWGC/grpc/status"
-	"github.com/Hyperledger-TWGC/grpc/testdata"
 )
 
 var caFile = flag.String("ca_file", "", "The file containing the CA root cert file")

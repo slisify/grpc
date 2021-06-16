@@ -23,11 +23,11 @@ import (
 	"testing"
 	"time"
 
+	grpc "github.com/slisify/grpc"
+	core "github.com/slisify/grpc/credentials/alts/internal"
+	altspb "github.com/slisify/grpc/credentials/alts/internal/proto/grpc_gcp"
+	"github.com/slisify/grpc/credentials/alts/internal/testutil"
 	"golang.org/x/net/context"
-	grpc "github.com/Hyperledger-TWGC/grpc"
-	core "github.com/Hyperledger-TWGC/grpc/credentials/alts/internal"
-	altspb "github.com/Hyperledger-TWGC/grpc/credentials/alts/internal/proto/grpc_gcp"
-	"github.com/Hyperledger-TWGC/grpc/credentials/alts/internal/testutil"
 )
 
 var (

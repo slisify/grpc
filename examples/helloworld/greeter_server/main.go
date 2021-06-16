@@ -24,10 +24,10 @@ import (
 	"log"
 	"net"
 
+	"github.com/slisify/grpc"
+	pb "github.com/slisify/grpc/examples/helloworld/helloworld"
+	"github.com/slisify/grpc/reflection"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc"
-	pb "github.com/Hyperledger-TWGC/grpc/examples/helloworld/helloworld"
-	"github.com/Hyperledger-TWGC/grpc/reflection"
 )
 
 const (

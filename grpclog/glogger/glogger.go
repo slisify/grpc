@@ -24,7 +24,7 @@ import (
 	"fmt"
 
 	"github.com/golang/glog"
-	"github.com/Hyperledger-TWGC/grpc/grpclog"
+	"github.com/slisify/grpc/grpclog"
 )
 
 func init() {

@@ -30,13 +30,13 @@ import (
 	"sync"
 	"time"
 
+	"github.com/slisify/grpc/credentials"
+	core "github.com/slisify/grpc/credentials/alts/internal"
+	"github.com/slisify/grpc/credentials/alts/internal/handshaker"
+	"github.com/slisify/grpc/credentials/alts/internal/handshaker/service"
+	altspb "github.com/slisify/grpc/credentials/alts/internal/proto/grpc_gcp"
+	"github.com/slisify/grpc/grpclog"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc/credentials"
-	core "github.com/Hyperledger-TWGC/grpc/credentials/alts/internal"
-	"github.com/Hyperledger-TWGC/grpc/credentials/alts/internal/handshaker"
-	"github.com/Hyperledger-TWGC/grpc/credentials/alts/internal/handshaker/service"
-	altspb "github.com/Hyperledger-TWGC/grpc/credentials/alts/internal/proto/grpc_gcp"
-	"github.com/Hyperledger-TWGC/grpc/grpclog"
 )
 
 const (

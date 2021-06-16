@@ -28,15 +28,15 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
+	"github.com/slisify/grpc"
+	"github.com/slisify/grpc/codes"
+	"github.com/slisify/grpc/grpclog"
+	testpb "github.com/slisify/grpc/interop/grpc_testing"
+	"github.com/slisify/grpc/metadata"
+	"github.com/slisify/grpc/status"
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
-	"github.com/Hyperledger-TWGC/grpc"
-	"github.com/Hyperledger-TWGC/grpc/codes"
-	"github.com/Hyperledger-TWGC/grpc/grpclog"
-	testpb "github.com/Hyperledger-TWGC/grpc/interop/grpc_testing"
-	"github.com/Hyperledger-TWGC/grpc/metadata"
-	"github.com/Hyperledger-TWGC/grpc/status"
 )
 
 var (

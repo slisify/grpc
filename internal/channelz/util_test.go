@@ -30,8 +30,8 @@ import (
 	"syscall"
 	"testing"
 
+	"github.com/slisify/grpc/internal/channelz"
 	"golang.org/x/sys/unix"
-	"github.com/Hyperledger-TWGC/grpc/internal/channelz"
 )
 
 func TestGetSocketOpt(t *testing.T) {

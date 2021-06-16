@@ -20,7 +20,7 @@
 // which encapsulate all the state needed by a client to authenticate with a
 // server and make various assertions, e.g., about the client's identity, role,
 // or whether it is authorized to make a particular call.
-package credentials // import "github.com/Hyperledger-TWGC/grpc/credentials"
+package credentials // import "github.com/slisify/grpc/credentials"
 
 import (
 	"errors"
@@ -28,10 +28,10 @@ import (
 	"net"
 	"strings"
 
-	"github.com/Hyperledger-TWGC/ccs-gm/sm2"
-	"github.com/Hyperledger-TWGC/ccs-gm/tls"
-	"github.com/Hyperledger-TWGC/ccs-gm/x509"
 	"github.com/golang/protobuf/proto"
+	"github.com/slisify/ccs-gm/sm2"
+	"github.com/slisify/ccs-gm/tls"
+	"github.com/slisify/ccs-gm/x509"
 	"golang.org/x/net/context"
 )
 
@@ -266,7 +266,7 @@ func NewServerTLSFromFileDouble(signCertFile, signKeyFile, cipherCertFile, ciphe
 	if err != nil {
 		return nil, err
 	}
-	
+
 	cipherCert, err := tls.LoadX509KeyPair(cipherCertFile, cipherKeyFile)
 	if err != nil {
 		return nil, err

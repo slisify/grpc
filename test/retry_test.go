@@ -29,13 +29,13 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
+	"github.com/slisify/grpc"
+	"github.com/slisify/grpc/codes"
+	"github.com/slisify/grpc/internal/envconfig"
+	"github.com/slisify/grpc/metadata"
+	"github.com/slisify/grpc/status"
+	testpb "github.com/slisify/grpc/test/grpc_testing"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc"
-	"github.com/Hyperledger-TWGC/grpc/codes"
-	"github.com/Hyperledger-TWGC/grpc/internal/envconfig"
-	"github.com/Hyperledger-TWGC/grpc/metadata"
-	"github.com/Hyperledger-TWGC/grpc/status"
-	testpb "github.com/Hyperledger-TWGC/grpc/test/grpc_testing"
 )
 
 func enableRetry() func() {

@@ -28,7 +28,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/Hyperledger-TWGC/grpc/grpclog"
+	"github.com/slisify/grpc/grpclog"
 )
 
 var (

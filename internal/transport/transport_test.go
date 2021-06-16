@@ -36,13 +36,13 @@ import (
 	"testing"
 	"time"
 
+	"github.com/slisify/grpc/codes"
+	"github.com/slisify/grpc/internal/leakcheck"
+	"github.com/slisify/grpc/keepalive"
+	"github.com/slisify/grpc/status"
 	"golang.org/x/net/context"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/hpack"
-	"github.com/Hyperledger-TWGC/grpc/codes"
-	"github.com/Hyperledger-TWGC/grpc/internal/leakcheck"
-	"github.com/Hyperledger-TWGC/grpc/keepalive"
-	"github.com/Hyperledger-TWGC/grpc/status"
 )
 
 type server struct {

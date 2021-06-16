@@ -25,17 +25,17 @@ import (
 	"testing"
 	"time"
 
+	"github.com/slisify/grpc"
+	"github.com/slisify/grpc/balancer/roundrobin"
+	"github.com/slisify/grpc/codes"
+	_ "github.com/slisify/grpc/grpclog/glogger"
+	"github.com/slisify/grpc/internal/leakcheck"
+	"github.com/slisify/grpc/peer"
+	"github.com/slisify/grpc/resolver"
+	"github.com/slisify/grpc/resolver/manual"
+	"github.com/slisify/grpc/status"
+	testpb "github.com/slisify/grpc/test/grpc_testing"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc"
-	"github.com/Hyperledger-TWGC/grpc/balancer/roundrobin"
-	"github.com/Hyperledger-TWGC/grpc/codes"
-	_ "github.com/Hyperledger-TWGC/grpc/grpclog/glogger"
-	"github.com/Hyperledger-TWGC/grpc/internal/leakcheck"
-	"github.com/Hyperledger-TWGC/grpc/peer"
-	"github.com/Hyperledger-TWGC/grpc/resolver"
-	"github.com/Hyperledger-TWGC/grpc/resolver/manual"
-	"github.com/Hyperledger-TWGC/grpc/status"
-	testpb "github.com/Hyperledger-TWGC/grpc/test/grpc_testing"
 )
 
 type testServer struct {

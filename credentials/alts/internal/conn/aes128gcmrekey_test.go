@@ -21,7 +21,7 @@ package conn
 import (
 	"testing"
 
-	core "github.com/Hyperledger-TWGC/grpc/credentials/alts/internal"
+	core "github.com/slisify/grpc/credentials/alts/internal"
 )
 
 // cryptoTestVector is struct for a rekey test vector

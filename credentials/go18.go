@@ -21,7 +21,7 @@
 package credentials
 
 import (
-	"github.com/Hyperledger-TWGC/ccs-gm/tls"
+	"github.com/slisify/ccs-gm/tls"
 )
 
 func init() {

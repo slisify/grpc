@@ -31,11 +31,11 @@ import (
 	"sync"
 	"time"
 
+	"github.com/slisify/grpc/grpclog"
+	"github.com/slisify/grpc/internal/backoff"
+	"github.com/slisify/grpc/internal/grpcrand"
+	"github.com/slisify/grpc/resolver"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc/grpclog"
-	"github.com/Hyperledger-TWGC/grpc/internal/backoff"
-	"github.com/Hyperledger-TWGC/grpc/internal/grpcrand"
-	"github.com/Hyperledger-TWGC/grpc/resolver"
 )
 
 func init() {

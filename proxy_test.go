@@ -29,8 +29,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/slisify/grpc/internal/leakcheck"
 	"golang.org/x/net/context"
-	"github.com/Hyperledger-TWGC/grpc/internal/leakcheck"
 )
 
 const (
